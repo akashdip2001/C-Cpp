@@ -225,7 +225,9 @@ for (int i = 0; i < 99; i++) {
 
 ### ✅ Safer Practice in C++:
 
-[`Calculate total elements: total bytes of array / bytes of one element`]()
+![size of array](https://github.com/user-attachments/assets/1f6662dc-c9bc-46c8-9a7d-fee8a6ddd66a)
+
+➕✖️➗ [`Calculate total elements = total bytes of array / bytes of one element`]()
 
 You can use:
 
