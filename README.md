@@ -227,7 +227,7 @@ for (int i = 0; i < 99; i++) {
 
 ![size of array](https://github.com/user-attachments/assets/1f6662dc-c9bc-46c8-9a7d-fee8a6ddd66a)
 
-➕✖️➗ [`Calculate total elements = total bytes of array / bytes of one element`]()
+➕✖️➗ [`Calculate total elements = total bytes of array / bytes of one element`](https://www.digitalocean.com/community/tutorials/find-array-length-in-c-plus-plus)
 
 You can use:
 
