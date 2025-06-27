@@ -4,21 +4,22 @@
 
 ## 📚 Table of Contents
 
-1. Hello World
-2. Input and Output
-3. Variables and Data Types
-4. Conditionals and Loops
-5. Functions
-6. Arrays and Strings
-7. Pointers
-8. Structures and Classes
-9. Object-Oriented Programming (OOP)
-    * Concepts and Theories
-    * Full Examples with Explanations
-10. Memory Management
-11. File Handling
-12. Data Structures and Algorithms (DSA)
-13. Summary: C vs C++
+1. [Hello World](#hello-world)
+2. [Input and Output](#input-and-output)
+3. [Variables and Data Types](#variables-and-data-types)
+4. [Conditionals and Loops](#conditionals-and-loops)
+5. [Functions](#functions)
+6. [Arrays and Strings](#arrays-and-strings)
+7. [Pointers](#pointers)
+8. [Structures and Classes](#structures-and-classes)
+9. [Object-Oriented Programming (OOP)](#object-oriented-programming-only-in-c)
+
+   * [Concepts and Theories](#object-oriented-programming-only-in-c)
+   * [Full Examples with Explanations](#object-oriented-programming-only-in-c)
+10. [Memory Management](#memory-management)
+11. [File Handling](#file-handling)
+12. [Data Structures and Algorithms (DSA)](#data-structures-and-algorithms-dsa)
+13. [Summary: C vs C++](#summary-c-vs-c)
 
 ---
 
