@@ -12,38 +12,40 @@
 6. [Arrays and Strings](#arrays-and-strings)
 7. [Pointers](#pointers)
 8. [Structures and Classes](#structures-and-classes)
-9. [Object-Oriented Programming (OOP)](#object-oriented-programming-only-in-c)
-   * [Concepts and Theories](#object-oriented-programming-only-in-c)
-   * [Full Examples with Explanations](#object-oriented-programming-only-in-c)
+9. [Object-Oriented Programming (OOP)](#object-oriented-programming)
+   * [Concepts and Theories](#object-oriented-programming)
+   * [Full Examples with Explanations](#object-oriented-programming)
 10. [Memory Management](#memory-management)
 11. [File Handling](#file-handling)
-12. [Data Structures and Algorithms (DSA)](#data-structures-and-algorithms-dsa)
-13. [Summary: C vs C++](#summary-c-vs-c)
+12. [Data Structures and Algorithms (DSA)](#data-structures-and-algorithms)
+13. [Summary: C vs C++](#summary)
 
 ---
+
+<a name="hello-world"></a>
 
 ## 1. Hello World
 
 ### C++
 
 ```cpp
-#include <iostream>
-using namespace std;
+#include <iostream> // For standard input and output
+using namespace std; // Allows use of standard library without std:: prefix
 
 int main() {
-    cout << "Hello, World!" << endl;
-    return 0;
+    cout << "Hello, World!" << endl; // Prints message followed by a new line
+    return 0; // Indicates successful execution
 }
 ```
 
 ### C
 
 ```c
-#include <stdio.h>
+#include <stdio.h> // For standard I/O functions like printf
 
 int main() {
-    printf("Hello, World!\n");
-    return 0;
+    printf("Hello, World!\n"); // Prints message with newline
+    return 0; // Exit code
 }
 ```
 
@@ -54,27 +56,31 @@ int main() {
 
 ---
 
+<a name="input-and-output"></a>
+
 ## 2. Input and Output
 
 ### C++
 
 ```cpp
 int a;
-cin >> a;
-cout << "You entered: " << a << endl;
+cin >> a; // Takes input from user and stores in 'a'
+cout << "You entered: " << a << endl; // Prints the value of 'a'
 ```
 
 ### C
 
 ```c
 int a;
-scanf("%d", &a);
-printf("You entered: %d\n", a);
+scanf("%d", &a); // Takes integer input and stores in 'a'
+printf("You entered: %d\n", a); // Prints the integer value
 ```
 
-**Difference**: C++ is more readable with stream I/O; C uses format specifiers.
+**Difference**: C++ uses stream-based I/O, which is simpler and more readable than C’s format-based I/O.
 
 ---
+
+<a name="variables-and-data-types"></a>
 
 ## 3. Variables and Data Types
 
@@ -90,21 +96,23 @@ C++ supports additional types:
 ### C++
 
 ```cpp
-int a = 10;
-float b = 3.14;
-bool isAlive = true;
-string name = "Alice";
+int a = 10; // Integer variable
+float b = 3.14f; // Floating-point variable
+bool isAlive = true; // Boolean variable
+string name = "Alice"; // String variable
 ```
 
 ### C
 
 ```c
-int a = 10;
-float b = 3.14;
-// no bool or string
+int a = 10; // Integer
+float b = 3.14f; // Float
+// No built-in bool or string in C; use 0/1 for bool, char arrays for strings
 ```
 
 ---
+
+<a name="conditionals-and-loops"></a>
 
 ## 4. Conditionals and Loops
 
@@ -140,6 +148,8 @@ for (int i = 0; i < 5; i++) {
 
 ---
 
+<a name="functions"></a>
+
 ## 5. Functions
 
 ### C++
@@ -162,6 +172,8 @@ int add(int a, int b) {
 
 ---
 
+<a name="arrays-and-strings"></a>
+
 ## 6. Arrays and Strings
 
 ### Arrays
@@ -169,7 +181,7 @@ int add(int a, int b) {
 ```cpp
 int arr[5] = {1, 2, 3, 4, 5};
 for (int i = 0; i < 5; i++) {
-    cout << arr[i] << " ";
+    cout << arr[i] << " "; // Prints elements of the array
 }
 ```
 
@@ -184,7 +196,8 @@ for (int i = 0; i < 5; i++) {
 
 ```cpp
 string name = "Bob";
-cout << name.length();
+// cout << name << endl; // Prints the string
+cout << name.length(); // Outputs length of the string
 ```
 
 ```c
@@ -209,14 +222,16 @@ int matrix[2][3] = {{1, 2, 3}, {4, 5, 6}};
 
 ---
 
+<a name="pointers"></a>
+
 ## 7. Pointers
 
 ### C++
 
 ```cpp
 int a = 5;
-int *p = &a;
-cout << *p;
+int *p = &a; // Pointer to variable 'a'
+cout << *p; // Dereferencing to get value
 ```
 
 ### C
@@ -224,12 +239,14 @@ cout << *p;
 ```c
 int a = 5;
 int *p = &a;
-printf("%d", *p);
+printf("%d", *p); // Prints value using pointer
 ```
 
 **Same syntax**, but C++ adds **smart pointers**.
 
 ---
+
+<a name="structures-and-classes"></a>
 
 ## 8. Structures and Classes
 
@@ -259,6 +276,8 @@ public:
 **C++ classes** support methods, access modifiers (`public`, `private`).
 
 ---
+
+<a name="object-oriented-programming"></a>
 
 ## 9. Object-Oriented Programming (Only in C++) [Lern more](#oops-more)
 
@@ -311,6 +330,8 @@ public:
 
 ---
 
+<a name="memory-management"></a>
+
 ## 10. Memory Management
 
 ### C
@@ -326,10 +347,20 @@ free(p);
 int* p = new int;
 delete p;
 ```
+#### or
+
+```cpp
+int *p = new int; // Dynamic memory allocation
+*p = 10; // Assign value
+cout << *p; // Access value
+delete p; // Free memory
+```
 
 C++ also supports **smart pointers** like `unique_ptr`, `shared_ptr`.
 
 ---
+
+<a name="file-handling"></a>
 
 ## 11. File Handling
 
@@ -351,9 +382,26 @@ file >> ch;
 file.close();
 ```
 
+#### or
+
+```cpp
+#include <fstream>
+ofstream file("example.txt"); // Create file
+file << "Hello, file!"; // Write to file
+file.close(); // Close the file
+```
+
 ---
 
+<a name="data-structures-and-algorithms"></a>
+
 ## 12. Data Structures and Algorithms (DSA)
+
+* Arrays
+* Linked List
+* Stack & Queue
+* Trees
+* Searching & Sorting
 
 ### Arrays
 
@@ -643,4 +691,3 @@ int main() {
 * `Shape` is an abstract class.
 * `Circle` implements the abstract method.
 * This hides how `draw()` works internally.
-
