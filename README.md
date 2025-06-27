@@ -192,6 +192,156 @@ for (int i = 0; i < 5; i++) {
 }
 ```
 
+<details>
+  <summary style="opacity: 0.85;"><b>Why we need `i < 5` ❓</b></summary><br>
+
+Great question! This dives into how arrays and memory work in C/C++. Let’s break it down clearly.
+
+---
+
+### 🔢 Code in Question
+
+```cpp
+int arr[5] = {1, 2, 3, 4, 5};   // Declared with 5 elements
+for (int i = 0; i < 5; i++) {
+    cout << arr[i] << " ";
+}
+```
+
+---
+
+### ✅ Why `i < 5`?
+
+You're right that we already declared the array size (`5`), so **why do we need to limit the loop to `i < 5`?**
+
+Because:
+
+* Arrays in C/C++ **do not do bounds checking**.
+* `arr[5]` is **out of bounds** — even though `arr[0]` to `arr[4]` are valid.
+* If you write `i < 99`, then the loop accesses memory beyond the array's valid size.
+
+---
+
+### 🧠 What happens if we write `i < 99`?
+
+```cpp
+for (int i = 0; i < 99; i++) {
+    cout << arr[i] << " "; // Accessing out-of-bounds elements!
+}
+```
+
+#### Possible results:
+
+1. **Junk/garbage values**: You’re reading random memory that your program does not own.
+2. **Crash / segmentation fault**: On modern OSes, this can crash the program.
+3. **Security risk**: You could be reading or writing sensitive memory (this is how exploits happen).
+
+---
+
+### ✅ Safer Practice in C++:
+
+[`Calculate total elements: total bytes of array / bytes of one element`]()
+
+You can use:
+
+```cpp
+for (int i = 0; i < sizeof(arr)/sizeof(arr[0]); i++)
+```
+
+Or better in modern C++:
+
+```cpp
+#include <array>
+std::array<int, 5> arr = {1, 2, 3, 4, 5};
+for (int i = 0; i < arr.size(); i++)
+```
+
+---
+
+### ✅ Safer Practice in C:
+
+```c
+for (int i = 0; i < sizeof(arr)/sizeof(arr[0]); i++) {
+    printf("%d ", arr[i]);
+}
+```
+
+## ✅ Example: Using `sizeof(arr)/sizeof(arr[0])`
+
+This is a **trick to automatically calculate the number of elements in a C/C++ array**.
+
+---
+
+### 🧪 Full Example in C
+
+```c
+#include <stdio.h>
+
+int main() {
+    int arr[5] = {10, 20, 30, 40, 50};
+
+    // Calculate total elements: total bytes of array / bytes of one element
+    int length = sizeof(arr) / sizeof(arr[0]);
+
+    printf("Array contains %d elements:\n", length);
+
+    for (int i = 0; i < length; i++) {
+        printf("arr[%d] = %d\n", i, arr[i]);
+    }
+
+    return 0;
+}
+```
+
+---
+
+### 🔍 Output:
+
+```
+Array contains 5 elements:
+arr[0] = 10
+arr[1] = 20
+arr[2] = 30
+arr[3] = 40
+arr[4] = 50
+```
+
+---
+
+### 💡 What does `sizeof(arr)/sizeof(arr[0])` mean?
+
+Let’s say:
+
+* `sizeof(arr)` = total size of array in bytes (e.g., 5 integers × 4 bytes = 20 bytes)
+* `sizeof(arr[0])` = size of one element (e.g., 4 bytes for `int`)
+
+Then:
+
+```c
+sizeof(arr) / sizeof(arr[0]) = 20 / 4 = 5
+```
+
+➡️ You now have the **correct number of elements** in the array.
+
+---
+
+### ❌ What if you just write `i < 99`?
+
+If you did:
+
+```c
+for (int i = 0; i < 99; i++) {
+    printf("%d\n", arr[i]); // 🚨 i >= 5 is invalid
+}
+```
+
+#### Result:
+
+* For `i = 0 to 4`, output is fine.
+* For `i = 5 to 98`, **you’ll get garbage values** or even crash the program!
+
+</details>
+
 ### Strings
 
 ```cpp
