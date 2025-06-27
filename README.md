@@ -193,22 +193,7 @@ for (int i = 0; i < 5; i++) {
 ```
 
 <details>
-  <summary style="opacity: 0.85;"><b>Why we need `i < 5` ❓</b></summary><br>
-
-Great question! This dives into how arrays and memory work in C/C++. Let’s break it down clearly.
-
----
-
-### 🔢 Code in Question
-
-```cpp
-int arr[5] = {1, 2, 3, 4, 5};   // Declared with 5 elements
-for (int i = 0; i < 5; i++) {
-    cout << arr[i] << " ";
-}
-```
-
----
+  <summary style="opacity: 0.85;"><b>Why we need `i < 5` ❓ bec already Declared the arr elements</b></summary><br>
 
 ### ✅ Why `i < 5`?
 
