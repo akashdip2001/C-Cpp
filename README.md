@@ -13,7 +13,6 @@
 7. [Pointers](#pointers)
 8. [Structures and Classes](#structures-and-classes)
 9. [Object-Oriented Programming (OOP)](#object-oriented-programming-only-in-c)
-
    * [Concepts and Theories](#object-oriented-programming-only-in-c)
    * [Full Examples with Explanations](#object-oriented-programming-only-in-c)
 10. [Memory Management](#memory-management)
