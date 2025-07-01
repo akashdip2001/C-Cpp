@@ -230,3 +230,72 @@ int main() {
     return 0;
 }
 ```
+
+<img src="https://user-images.githubusercontent.com/73097560/115834477-dbab4500-a447-11eb-908a-139a6edaec5c.gif">
+<img src="https://user-images.githubusercontent.com/73097560/115834477-dbab4500-a447-11eb-908a-139a6edaec5c.gif">
+
+
+# Q2 Two Sum , But return ARRAY index
+
+![Screenshot (58)](https://github.com/user-attachments/assets/22cd729a-447b-4ece-83c9-8090f3da6f1d)
+
+---
+
+### 🔧 Problem Recap:
+
+**Input:**
+
+```c
+numbers = [2,7,11,15]
+target = 9
+```
+
+**Output:**
+
+```c
+[1,2]
+```
+
+**Explanation:** `2 + 7 = 9`, and `2` is at index `0`, `7` is at index `1`.
+In 1-based indexing → `[1, 2]`.
+
+---
+
+## ✅ C Implementation (Brute-force)
+
+Here’s a simple and correct C program using nested loops:
+
+```c
+#include <stdio.h>
+
+void twoSum(int arr[], int size, int target) {
+    for (int i = 0; i < size - 1; i++) {
+        for (int j = i + 1; j < size; j++) {
+            if (arr[i] + arr[j] == target) {
+                // 1-based indexing
+                printf("Output: [%d, %d]\n", i + 1, j + 1);
+                return;
+            }
+        }
+    }
+    printf("No two numbers found that sum to %d\n", target);
+}
+
+int main() {
+    int numbers[] = {2, 7, 11, 15};
+    int target = 9;
+    int size = sizeof(numbers) / sizeof(numbers[0]);
+
+    twoSum(numbers, size, target);
+
+    return 0;
+}
+```
+
+---
+
+## ✅ Output:
+
+```
+Output: [1, 2]
+```
