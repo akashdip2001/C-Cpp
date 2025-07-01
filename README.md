@@ -842,8 +842,8 @@ int main() {
 
 | Problem                   | Description                                                       | Sample Input                | Sample Output  |
 | ------------------------- | ----------------------------------------------------------------- | --------------------------- | -------------- |
-| **1. Palindrome Number**  | A number that remains same when reversed.                         | 121                         | Palindrome     |
-| **2. Armstrong Number**   | Sum of cubes of each digit is equal to the number (for 3-digit).  | 153                         | Armstrong      |
+| **1. Palindrome Number**  | A number that remains same when reversed. [YouTube Video](https://youtu.be/LJ0m-8zGRB4)                        | 121                         | Palindrome     |
+| **2. Armstrong Number**   | Sum of cubes of each digit is equal to the number (for 3-digit). [YouTube Video](https://youtu.be/2qcUcon5Ux0)  | 153                         | Armstrong      |
 | **3. Prime Number Check** | A number greater than 1 with no divisors other than 1 and itself. | 7                           | Prime          |
 | **4. Perfect Number**     | Sum of divisors (excluding itself) equals the number.             | 28                          | Perfect Number |
 | **5. Strong Number**      | Sum of factorials of digits equals the number.                    | 145                         | Strong         |
