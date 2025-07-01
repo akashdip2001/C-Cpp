@@ -279,6 +279,9 @@ Here’s your function:
 void bubbleShort(int arr[], int size)
 ```
 
+| [complete code](https://github.com/akashdip2001/C-Cpp/blob/main/DSA/Day_1/1%20Array/2_2_BubbleShort.c) |
+| --- |
+
 ### Why no `*` here?
 
 Because arrays in C are **always passed by reference** (even though it looks like they're passed by value).
