@@ -19,7 +19,7 @@
 11. [File Handling](#file-handling)
 12. [Data Structures and Algorithms (DSA)](#data-structures-and-algorithms)
 13. [Summary: C vs C++](#summary)
-14. [Questions](practice-questions)
+14. [Questions](#practice-questions)
 
 ---
 
