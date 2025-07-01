@@ -19,6 +19,7 @@
 11. [File Handling](#file-handling)
 12. [Data Structures and Algorithms (DSA)](#data-structures-and-algorithms)
 13. [Summary: C vs C++](#summary)
+14. [Questions](practice-questions)
 
 ---
 
@@ -830,3 +831,82 @@ int main() {
 * `Shape` is an abstract class.
 * `Circle` implements the abstract method.
 * This hides how `draw()` works internally.
+
+---
+
+# Practice Questions <a name="practice-questions"></a>
+
+---
+
+### 🔢 **Number-based Problems**
+
+| Problem                   | Description                                                       | Sample Input                | Sample Output  |
+| ------------------------- | ----------------------------------------------------------------- | --------------------------- | -------------- |
+| **1. Palindrome Number**  | A number that remains same when reversed.                         | 121                         | Palindrome     |
+| **2. Armstrong Number**   | Sum of cubes of each digit is equal to the number (for 3-digit).  | 153                         | Armstrong      |
+| **3. Prime Number Check** | A number greater than 1 with no divisors other than 1 and itself. | 7                           | Prime          |
+| **4. Perfect Number**     | Sum of divisors (excluding itself) equals the number.             | 28                          | Perfect Number |
+| **5. Strong Number**      | Sum of factorials of digits equals the number.                    | 145                         | Strong         |
+| **6. Neon Number**        | Square of number, sum of digits of square equals number.          | 9 → 9² = 81 → 8+1 = 9       | Neon           |
+| **7. Automorphic Number** | A number whose square ends with the number itself.                | 76 → 76² = 5776             | Automorphic    |
+| **8. Harshad Number**     | Divisible by sum of its digits.                                   | 18 → 1+8=9 → 18%9==0        | Harshad        |
+| **9. Duck Number**        | Contains zero, but not at beginning.                              | 1203                        | Duck Number    |
+| **10. Spy Number**        | Sum of digits equals product of digits.                           | 1124 → 1+1+2+4=8; 1×1×2×4=8 | Spy Number     |
+| **11. Fibonacci Series**  | Sequence: 0, 1, 1, 2, 3, 5, ...                                   | n = 5                       | 0 1 1 2 3      |
+| **12. Factorial**         | Product of all natural numbers up to n.                           | 5                           | 120            |
+| **13. Sum of Digits**     | Add all digits.                                                   | 123                         | 6              |
+| **14. Reverse Number**    | Reverse the digits.                                               | 1234                        | 4321           |
+| **15. GCD / HCF**         | Highest common factor.                                            | 12, 18                      | 6              |
+| **16. LCM**               | Lowest common multiple.                                           | 12, 18                      | 36             |
+| **17. Swapping Numbers**  | Exchange values using temp or without temp.                       | a=3, b=4                    | a=4, b=3       |
+| **18. Count Digits**      | Count how many digits.                                            | 12345                       | 5              |
+| **19. Power of a Number** | a^b using loop.                                                   | 2^3                         | 8              |
+| **20. Decimal to Binary** | Convert base 10 to base 2.                                        | 10                          | 1010           |
+
+---
+
+### 🔠 **String-based Problems**
+
+| Problem                           | Description                            | Sample Input   | Sample Output  |
+| --------------------------------- | -------------------------------------- | -------------- | -------------- |
+| **21. Palindrome String**         | Same forward and backward.             | madam          | Palindrome     |
+| **22. Reverse String**            | Reverse character order.               | hello          | olleh          |
+| **23. Count Vowels & Consonants** | Identify number of vowels.             | apple          | Vowels=2       |
+| **24. Check Anagram**             | Same letters in different order.       | listen, silent | Anagram        |
+| **25. Frequency of Characters**   | Count occurrence of each character.    | banana         | a=3, b=1, n=2  |
+| **26. Toggle Case**               | Convert upper to lower and vice versa. | HeLLo          | hEllO          |
+| **27. Remove Spaces**             | Delete all white spaces.               | a b c          | abc            |
+| **28. Check Pangram**             | Contains all 26 letters.               | The quick...   | Pangram        |
+| **29. Count Words**               | Number of words in string.             | Hello world    | 2              |
+| **30. Compare Strings**           | Lexicographically compare.             | apple, banana  | apple < banana |
+
+---
+
+### 🧮 **Pattern Printing Problems**
+
+| Problem                     | Description                        | Sample Input | Sample Output           |
+| --------------------------- | ---------------------------------- | ------------ | ----------------------- |
+| **31. Right Triangle Star** | Print right-angled triangle.       | 3            | *<br>**<br>***          |
+| **32. Pyramid Pattern**     | Center-aligned pyramid.            | 3            |   *<br> ***<br>**\*\*\* |
+| **33. Inverted Triangle**   | Reverse triangle.                  | 3            | ***<br>**<br>*          |
+| **34. Number Triangle**     | Triangle with numbers.             | 3            | 1<br>12<br>123          |
+| **35. Floyd's Triangle**    | Incrementing numbers triangle.     | 3            | 1<br>2 3<br>4 5 6       |
+| **36. Pascal’s Triangle**   | Binomial coefficients in triangle. | 3            | 1<br>1 1<br>1 2 1       |
+| **37. Alphabet Triangle**   | Print characters in triangle.      | 3            | A<br>AB<br>ABC          |
+
+---
+
+### 🧠 **Logic/Other Problems**
+
+| Problem                            | Description                                         | Sample Input     | Sample Output |
+| ---------------------------------- | --------------------------------------------------- | ---------------- | ------------- |
+| **38. Leap Year Check**            | Divisible by 4 but not 100 unless divisible by 400. | 2024             | Leap Year     |
+| **39. Calculator using switch**    | Perform +, -, \*, /.                                | a=4, b=2, op=/   | 2             |
+| **40. Simple Interest**            | (P×R×T)/100                                         | P=1000, R=5, T=2 | 100           |
+| **41. Armstrong for n digits**     | Works for any number of digits.                     | 9474             | Armstrong     |
+| **42. Sum of N natural numbers**   | n(n+1)/2                                            | 5                | 15            |
+| **43. Largest of Three Numbers**   | Use if-else or ternary.                             | 3, 5, 2          | 5             |
+| **44. ASCII value**                | Print ASCII of character.                           | A                | 65            |
+| **45. Calculator using Functions** | Modular functions for +, -, etc.                    | 5 + 2            | 7             |
+
+
