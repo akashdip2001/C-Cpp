@@ -202,7 +202,7 @@ int find(int *a, int *b) {
 
 <img src="https://user-images.githubusercontent.com/73097560/115834477-dbab4500-a447-11eb-908a-139a6edaec5c.gif">
 
-# ✅ No need to return two values in ihe main()
+# Or, ✅ No need to return two values in ihe main()
 
 ```
 #include <stdio.h>
