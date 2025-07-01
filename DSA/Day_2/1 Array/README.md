@@ -201,3 +201,32 @@ int find(int *a, int *b) {
 ---
 
 <img src="https://user-images.githubusercontent.com/73097560/115834477-dbab4500-a447-11eb-908a-139a6edaec5c.gif">
+
+# ✅ No need to return two values in ihe main()
+
+```
+#include <stdio.h>
+
+// Function returns 1 if a pair is found, else 0
+int twoSum(int arr[], int size, int target) {
+    for(int i = 0; i < size; i++) {
+        for(int j = i + 1; j < size; j++) {
+            if(arr[i] + arr[j] == target) {
+                printf("The painr is %d and %d", arr[i], arr[j]);
+                return 1; // Exit early since pair is found
+            }
+        }
+    }
+    return 0; // No pair found
+}
+
+int main() {
+    int arr[] = {1, 2, 3, 4, 5, 6, 8, 10};
+    int size = sizeof(arr)/sizeof(arr[0]);
+    int target = 15;
+
+  twoSum(arr, size, target);
+
+    return 0;
+}
+```
