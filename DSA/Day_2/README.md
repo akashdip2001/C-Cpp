@@ -244,7 +244,7 @@ int main() {
 }
 ```
 
-# But why * pointers ??
+# But why * pointers ?? [`Harry Video`](https://m.youtube.com/watch?v=ZSPZob_1TOk&t=29582s&pp=2AGO5wGQAgE%3D)
 
 Great question! You're noticing an important difference between **modifying an array** and **returning multiple individual values** from a function.
 
